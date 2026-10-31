@@ -21,10 +21,19 @@ Taller para aprender a trabajar con **Android CLI** y **agentes de código** con
 
 ## Before you start / Antes de empezar
 
-1. Follow the prerequisites guide: [es/INSTRUCCIONES_PREVIAS.md](es/INSTRUCCIONES_PREVIAS.md) or [en/PREREQUISITES.md](en/PREREQUISITES.md).
-2. Follow the milestones in order, starting with Milestone 1 / Hito 1: [en](en/Milestones/STEP_1.md) · [es](es/Hitos/STEP_1.md).
+Do this **before the workshop**, on your own / Haz esto **antes del workshop**, por tu cuenta:
 
-You don't need to create any project in advance: Milestone 1 explains how to set up the folder with `AGENTS.md` and `SPEC.md`.
+- Follow the prerequisites guide / Sigue la guía de preparación previa: [es/INSTRUCCIONES_PREVIAS.md](es/INSTRUCCIONES_PREVIAS.md) · [en/PREREQUISITES.md](en/PREREQUISITES.md).
+
+You don't need to create any project in advance. / No hace falta que crees ningún proyecto de antemano.
+
+## During the workshop / Durante el workshop
+
+During the workshop we'll follow these instructions **together**, so please wait for us before starting. You can skim them beforehand, but don't work ahead.
+
+Durante el workshop seguiremos estas instrucciones **juntos**, así que espera a que lo hagamos antes de empezar. Puedes echarles un vistazo antes, pero no te adelantes.
+
+Follow the milestones in order, starting with Milestone 1 / Hito 1: [en](en/Milestones/STEP_1.md) · [es](es/Hitos/STEP_1.md). Milestone 1 explains how to set up the folder with `AGENTS.md` and `SPEC.md`. / El Hito 1 explica cómo preparar la carpeta con `AGENTS.md` y `SPEC.md`.
 
 ## License
 

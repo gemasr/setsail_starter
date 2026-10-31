@@ -25,11 +25,15 @@ It's a small app on purpose. Data lives in memory and is loaded from sample data
 | Letting the agent see the app with `android layout` and `android screen capture` | Milestones 3 to 5 |
 | Letting the agent test the app with `android input` and journeys | Milestone 6 |
 
-## Before the workshop
+## Before you start
 
-To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Follow the [prerequisites guide](PREREQUISITES.md): most of the time is spent downloading, so take it easy and do it well in advance.
+To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Follow the [prerequisites guide](PREREQUISITES.md): most of the time is spent downloading, so take it easy and do it well in advance. You don't need to create any project in advance.
 
-## How we work
+## During the workshop
+
+During the workshop we'll follow these instructions **together**, so please wait for us before starting. You can skim them beforehand, but don't work ahead.
+
+### How we work
 
 1. Each milestone has a **goal**, a **prompt** that you copy to the agent, a list of **checks** to verify the result and some help **if you get stuck**.
 2. The agent reads `AGENTS.md` and `SPEC.md` in the project root. That's where the rules of the game are; the prompt only says what to do at each step.
@@ -38,7 +42,7 @@ To make the most of the workshop, arrive with three things working: **Android CL
 
 Tip: start a **new agent session for each milestone**. Each milestone comes with its complete prompt, and long conversations use more tokens.
 
-## Milestones
+### Milestones
 
 | Milestone | What you get |
 |---|---|

@@ -25,11 +25,15 @@ Es una app pequeña a propósito. Los datos viven en memoria y se cargan desde u
 | Que el agente vea la app con `android layout` y `android screen capture` | Hitos 3 a 5 |
 | Que el agente pruebe la app con `android input` y los journeys | Hito 6 |
 
-## Antes del taller
+## Antes de empezar
 
-Para aprovechar el taller tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Sigue la guía de [preparación previa](INSTRUCCIONES_PREVIAS.md): casi todo el tiempo son descargas, así que hazlo con calma y con antelación.
+Para aprovechar el taller tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Sigue la guía de [preparación previa](INSTRUCCIONES_PREVIAS.md): casi todo el tiempo son descargas, así que hazlo con calma y con antelación. No hace falta que crees ningún proyecto de antemano.
 
-## Cómo se trabaja
+## Durante el workshop
+
+Durante el workshop seguiremos estas instrucciones **juntos**, así que espera a que lo hagamos antes de empezar. Puedes echarles un vistazo antes, pero no te adelantes.
+
+### Cómo se trabaja
 
 1. Cada hito tiene un **objetivo**, un **prompt** que copias al agente, una lista de **comprobaciones** para verificar el resultado y una ayuda **si te atascas**.
 2. El agente lee `AGENTS.md` y `SPEC.md` en la raíz del proyecto. Ahí están las reglas del juego; el prompt solo dice qué hacer en cada paso.
@@ -38,7 +42,7 @@ Para aprovechar el taller tienes que llegar con tres cosas funcionando: **Androi
 
 Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae su prompt completo, y las conversaciones largas gastan más tokens.
 
-## Hitos
+### Hitos
 
 | Hito | Qué consigues |
 |---|---|
