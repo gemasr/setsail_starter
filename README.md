@@ -19,7 +19,7 @@ Taller para aprender a trabajar con **Android CLI** y **agentes de código** con
 | `en/` | Workshop in English: prerequisites, milestones and `SPEC.md` |
 | `util/` | `AGENTS.md`, the project conventions for the agent, shared by both languages |
 
-## Before you start / Antes de empezar
+## Before the workshop / Antes del workshop
 
 Do this **before the workshop**, on your own / Haz esto **antes del workshop**, por tu cuenta:
 

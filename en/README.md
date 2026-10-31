@@ -25,7 +25,7 @@ It's a small app on purpose. Data lives in memory and is loaded from sample data
 | Letting the agent see the app with `android layout` and `android screen capture` | Milestones 3 to 5 |
 | Letting the agent test the app with `android input` and journeys | Milestone 6 |
 
-## Before you start
+## Before the workshop
 
 To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Follow the [prerequisites guide](PREREQUISITES.md): most of the time is spent downloading, so take it easy and do it well in advance. You don't need to create any project in advance.
 
