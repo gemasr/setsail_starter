@@ -1,12 +1,14 @@
 # Set Sail to the Grand Line — Prerequisites
 
-Oct 26, 2026 · @Gema
+@Gema
 
 ## What we're going to do
 
-To make the most of the November 7 workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Set aside some quiet time: most of it is downloads.
+To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Set aside some quiet time: most of it is downloads.
 
 You don't need to create any project. We'll build it together from scratch during the workshop, and the instructions work whichever agent you choose.
+
+> **Note:** if you already have something installed that is asked for here, skip that step. For example, if you already have Android Studio you don't need to install it again, although it's a good idea to keep it up to date.
 
 ## What you need
 
@@ -56,6 +58,8 @@ If it isn't recognized, it's in the `platform-tools` folder of your SDK (`androi
 **If you already have a command-line agent installed with a subscription, skip this step.** It's only for people who have no subscription and don't currently use any agent.
 
 Choose **only one**. Any of these works for the workshop; if you don't want to pay, the free options are Antigravity CLI and OpenCode.
+
+> **Note:** this workshop has only been tested with Copilot CLI, Claude Code and Antigravity CLI. Other agents may not behave the same way. You can also use any other agent that isn't in the table, as long as it can be used from the console.
 
 | Agent | Cost | What to keep in mind |
 | --- | --- | --- |
