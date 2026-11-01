@@ -1,7 +1,5 @@
 # Set Sail to the Grand Line — Prerequisites
 
-@Gema
-
 ## What we're going to do
 
 To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Set aside some quiet time: most of it is downloads.

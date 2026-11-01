@@ -1,7 +1,5 @@
 # Set Sail to the Grand Line — Preparación previa
 
-@Gema
-
 ## Qué vamos a hacer
 
 Para aprovechar el workshop tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Reserva un rato tranquilo: casi todo el tiempo son descargas.
