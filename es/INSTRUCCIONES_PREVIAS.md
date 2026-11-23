@@ -1,10 +1,10 @@
-# Set Sail to the Grand Line — Preparación previa
+# Set Sail for the Grand Line — Preparación previa
 
 ## Qué vamos a hacer
 
 Para aprovechar el workshop tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Reserva un rato tranquilo: casi todo el tiempo son descargas.
 
-No hace falta que crees ningún proyecto. Lo construiremos juntos desde cero durante el workshop, y las instrucciones valen sea cual sea el agente que elijas.
+No hace falta que crees ningún proyecto. Trabajaremos sobre él juntos durante el workshop, y las instrucciones valen sea cual sea el agente que elijas.
 
 > **Nota:** si ya tienes instalado algo de lo que se pide aquí, sáltate ese paso. Por ejemplo, si ya tienes Android Studio no hace falta que lo instales de nuevo, aunque conviene tenerlo actualizado.
 
@@ -93,6 +93,8 @@ Sigue la guía oficial de instalación de cada herramienta e inicia sesión con 
 
 **Consejo:** con un plan gratuito, haz una única prueba corta y no gastes cuota los días previos.
 
+**Cuota durante el workshop:** el workshop está pensado para caber en una cuota limitada. Si se te acaba, no tienes que empezar de nuevo: los Hitos 3 y 4 parten de un checkpoint (un zip que descargas), así que puedes engancharte directamente.
+
 ## Paso 3 · Preparar un emulador
 
 Primero descarga la plataforma de Android 16 (API 36) y la imagen del sistema para el emulador. Son varios GB, así que es lo que más tarda: hazlo con tiempo y buena conexión.
@@ -127,6 +129,18 @@ android skills list
 
 Si la primera búsqueda se queda colgada o falla con un error de índice, espera a que termine, ciérrala y vuelve a ejecutarla.
 
+## Paso 5 · Calentar Gradle (opcional, recomendado)
+
+La primera compilación de un proyecto Android descarga Gradle y muchas librerías, y puede tardar varios minutos. Hacerla ahora evita tiempos muertos en el Hito 1. En una carpeta temporal:
+
+```
+android create --name WarmUp --output WarmUp
+cd WarmUp
+./gradlew assembleDebug
+```
+
+(En Windows usa `gradlew.bat assembleDebug`.) Cuando termine, borra la carpeta `WarmUp`. No la necesitarás más.
+
 ## Comprobación final
 
 Si puedes marcar todo esto, estás listo:
@@ -138,6 +152,7 @@ Si puedes marcar todo esto, estás listo:
 - [ ] Tu agente arranca y has iniciado sesión.
 - [ ] La plataforma de Android 16 está instalada: `android sdk list` muestra `platforms/android-36`.
 - [ ] Un emulador arranca, o tienes un móvil con depuración USB.
+- [ ] (Opcional) La compilación de calentamiento de Gradle terminó.
 - [ ] Prueba con el agente: en una carpeta vacía, pídele «Ejecuta `android --help` y dime en una frase qué puede hacer». Si lo ejecuta y te contesta, todo está bien conectado.
 
 ## Problemas frecuentes

@@ -1,4 +1,4 @@
-# Set Sail to the Grand Line
+# Set Sail for the Grand Line
 
 Taller para aprender a trabajar con **Android CLI** y con **agentes de código** construyendo una app Android de principio a fin.
 
@@ -28,7 +28,7 @@ Es una app pequeña a propósito. Los datos viven en memoria y se cargan desde u
 
 ## Antes del workshop
 
-Para aprovechar el taller tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Sigue la guía de [preparación previa](INSTRUCCIONES_PREVIAS.md): casi todo el tiempo son descargas, así que hazlo con calma y con antelación. No hace falta que crees ningún proyecto de antemano.
+Para aprovechar el taller tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Sigue la guía de [preparación previa](INSTRUCCIONES_PREVIAS.md): casi todo el tiempo son descargas, así que hazlo con calma y con antelación. No hace falta que crees ningún proyecto de antemano. La Parte 1 usa Android CLI a mano y la Parte 2 usa tu agente, así que los dos tienen que funcionar.
 
 ## Durante el workshop
 
@@ -36,12 +36,21 @@ Durante el workshop seguiremos estas instrucciones **juntos**, así que espera a
 
 ### Cómo se trabaja
 
+El taller tiene dos partes:
+
+- **Parte 1: Android CLI a mano.** Escribimos nosotros los comandos (`android init`, `info`, `sdk`, `create`, `emulator`, `run`...) para entender qué hace cada uno. Se sigue con las diapositivas.
+- **Parte 2: agentes.** Los cuatro hitos de abajo: el agente usa esos mismos comandos por ti.
+
+En la Parte 2:
+
 1. Cada hito tiene un **objetivo**, un **prompt** que copias al agente, una lista de **comprobaciones** para verificar el resultado y una ayuda **si te atascas**.
 2. El agente lee `AGENTS.md` y `SPEC.md` en la raíz del proyecto. Ahí están las reglas del juego; el prompt solo dice qué hacer en cada paso.
 3. El agente implementa **solo lo que pide el hito** y, cuando termina, compila y te cuenta qué ha verificado.
 4. Tú compruebas el resultado con las casillas del hito, igual que lo haría una persona usuaria.
 
 Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae su prompt completo, y las conversaciones largas gastan más tokens.
+
+**¿Te quedas sin cuota?** Los Hitos 3 y 4 empiezan desde un checkpoint que descargas como zip, así que puedes saltar adelante sin haber hecho los anteriores. Ahorra tokens usando los prompts tal cual y sin pedirle extras al agente.
 
 ### Hitos
 
@@ -62,6 +71,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 | `Hitos/` | Los pasos del taller, uno por archivo |
 | `extra/` | Pasos opcionales para construir la app entera en casa |
 | `SPEC.md` | La especificación de la app: datos, reglas de negocio y textos exactos |
+| `SAMPLE_RECIPES.md` | Las seis recetas de ejemplo; solo hacen falta en los pasos opcionales de `extra/` |
 | `../util/AGENTS.md` | Las convenciones del proyecto para el agente (arquitectura, librerías, cómo trabajar) |
 
 Copia `SPEC.md` y `AGENTS.md` a la raíz de tu proyecto antes de lanzar el prompt del Hito 1. Los pasos exactos están en [Hito 1](Hitos/STEP_1.md).

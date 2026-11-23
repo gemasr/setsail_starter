@@ -1,6 +1,6 @@
-# Set Sail to the Grand Line
+# Set Sail for the Grand Line
 
-Starter for the workshop **Set Sail to the Grand Line**: learn to work with **Android CLI** and **coding agents** by building an Android app, *Sanji's Galley*, step by step.
+Starter for the workshop **Set Sail for the Grand Line**: learn to work with **Android CLI** and **coding agents** by building an Android app, *Sanji's Galley*, step by step.
 
 Taller para aprender a trabajar con **Android CLI** y **agentes de código** construyendo paso a paso una app Android, *Sanji's Galley*.
 

@@ -2,10 +2,14 @@
 
 Have the data model and the sample data.
 
+## Before the prompt
+
+Copy `SAMPLE_RECIPES.md` (from the `en` folder) to the project root, next to `SPEC.md`.
+
 ## Prompt
 
 ```
-Read SPEC.md and look at the project's current code. Implement the data model and the loading of the sample data (entities, business rules and sample data from SPEC.md). Do not implement the content of the screens yet. When you finish, build it, run it on the emulator and check the screen using Android CLI, and tell me what you verified.
+Read SPEC.md and look at the project's current code. Implement the data model and the loading of the sample data (entities, business rules and sample data from SPEC.md and SAMPLE_RECIPES.md). Do not implement the content of the screens yet. When you finish, build it, run it on the emulator and check the screen using Android CLI, and tell me what you verified.
 ```
 
 ## Checks

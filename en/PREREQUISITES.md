@@ -1,10 +1,10 @@
-# Set Sail to the Grand Line — Prerequisites
+# Set Sail for the Grand Line — Prerequisites
 
 ## What we're going to do
 
 To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Set aside some quiet time: most of it is downloads.
 
-You don't need to create any project. We'll build it together from scratch during the workshop, and the instructions work whichever agent you choose.
+You don't need to create any project. We'll work on it together during the workshop, and the instructions work whichever agent you choose.
 
 > **Note:** if you already have something installed that is asked for here, skip that step. For example, if you already have Android Studio you don't need to install it again, although it's a good idea to keep it up to date.
 
@@ -93,6 +93,8 @@ Follow each tool's official installation guide and sign in with your account.
 
 **Tip:** with a free plan, do a single short test and don't spend quota in the days before the workshop.
 
+**Quota during the workshop:** the workshop is designed to fit a limited quota. If you run out, you don't need to start over: Milestones 3 and 4 start from a checkpoint (a zip you download), so you can jump straight in.
+
 ## Step 3 · Set up an emulator
 
 First download the Android 16 (API 36) platform and the system image for the emulator. They are several GB, so this is what takes longest: do it with time and a good connection.
@@ -127,6 +129,18 @@ android skills list
 
 If the first search hangs or fails with an index error, wait for it to finish, close it and run it again.
 
+## Step 5 · Warm up Gradle (optional, recommended)
+
+The first build of an Android project downloads Gradle and many libraries, and can take several minutes. Doing it now avoids dead time in Milestone 1. In a temporary folder:
+
+```
+android create --name WarmUp --output WarmUp
+cd WarmUp
+./gradlew assembleDebug
+```
+
+(On Windows use `gradlew.bat assembleDebug`.) When it finishes, delete the `WarmUp` folder. You don't need it again.
+
 ## Final check
 
 If you can tick all of these, you're ready:
@@ -138,6 +152,7 @@ If you can tick all of these, you're ready:
 - [ ] Your agent starts and you have signed in.
 - [ ] The Android 16 platform is installed: `android sdk list` shows `platforms/android-36`.
 - [ ] An emulator starts, or you have a phone with USB debugging.
+- [ ] (Optional) The Gradle warm-up build finished.
 - [ ] Test with the agent: in an empty folder, ask it "Run `android --help` and tell me in one sentence what it can do". If it runs it and answers you, everything is connected correctly.
 
 ## Common problems

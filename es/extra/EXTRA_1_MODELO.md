@@ -2,10 +2,14 @@
 
 Tener el modelo de datos y los datos de ejemplo.
 
+## Antes del prompt
+
+Copia `SAMPLE_RECIPES.md` (de la carpeta `es`) a la raíz del proyecto, junto a `SPEC.md`.
+
 ## Prompt
 
 ```
-Lee SPEC.md y mira el código actual del proyecto. Implementa el modelo de datos y la carga de los datos de ejemplo (entidades, reglas de negocio y datos de ejemplo de SPEC.md). No implementes todavía el contenido de las pantallas. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
+Lee SPEC.md y mira el código actual del proyecto. Implementa el modelo de datos y la carga de los datos de ejemplo (entidades, reglas de negocio y datos de ejemplo de SPEC.md y SAMPLE_RECIPES.md). No implementes todavía el contenido de las pantallas. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
 ```
 
 ## Comprobación

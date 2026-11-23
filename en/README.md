@@ -1,4 +1,4 @@
-# Set Sail to the Grand Line
+# Set Sail for the Grand Line
 
 A workshop to learn how to work with **Android CLI** and **coding agents** by building an Android app from start to finish.
 
@@ -28,7 +28,7 @@ It's a small app on purpose. Data lives in memory and is loaded from sample data
 
 ## Before the workshop
 
-To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Follow the [prerequisites guide](PREREQUISITES.md): most of the time is spent downloading, so take it easy and do it well in advance. You don't need to create any project in advance.
+To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Follow the [prerequisites guide](PREREQUISITES.md): most of the time is spent downloading, so take it easy and do it well in advance. You don't need to create any project in advance. Part 1 uses Android CLI by hand and Part 2 uses your agent, so both need to be working.
 
 ## During the workshop
 
@@ -36,12 +36,21 @@ During the workshop we'll follow these instructions **together**, so please wait
 
 ### How we work
 
+The workshop has two parts:
+
+- **Part 1: Android CLI by hand.** We type the commands ourselves (`android init`, `info`, `sdk`, `create`, `emulator`, `run`...) to learn what each one does. We follow it on the slides.
+- **Part 2: agents.** The four milestones below: the agent uses those same commands for you.
+
+In Part 2:
+
 1. Each milestone has a **goal**, a **prompt** that you copy to the agent, a list of **checks** to verify the result and some help **if you get stuck**.
 2. The agent reads `AGENTS.md` and `SPEC.md` in the project root. That's where the rules of the game are; the prompt only says what to do at each step.
 3. The agent implements **only what the milestone asks for** and, when it finishes, builds the app and tells you what it verified.
 4. You check the result with the milestone's checkboxes, just as a user would.
 
 Tip: start a **new agent session for each milestone**. Each milestone comes with its complete prompt, and long conversations use more tokens.
+
+**Running out of quota?** Milestones 3 and 4 start from a checkpoint you download as a zip, so you can skip ahead without having done the previous ones. Save tokens by keeping prompts as they are and not asking the agent for extras.
 
 ### Milestones
 
@@ -62,6 +71,7 @@ Want to build the whole app yourself? The steps the workshop skips (data model, 
 | `Milestones/` | The workshop steps, one per file |
 | `extra/` | Optional steps to build the whole app at home |
 | `SPEC.md` | The app specification: data, business rules and exact texts |
+| `SAMPLE_RECIPES.md` | The six sample recipes; only needed for the optional `extra/` steps |
 | `../util/AGENTS.md` | The project conventions for the agent (architecture, libraries, how to work) |
 
 Copy `SPEC.md` and `AGENTS.md` to the root of your project before running the Milestone 1 prompt. The exact steps are in [Milestone 1](Milestones/STEP_1.md).
