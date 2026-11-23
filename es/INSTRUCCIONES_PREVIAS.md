@@ -163,4 +163,4 @@ Si puedes marcar todo esto, estás listo:
 | Windows: falla la descarga desde PowerShell o `android emulator` no funciona | Son limitaciones conocidas. Descarga desde la página oficial y crea el emulador desde Android Studio. |
 | El emulador va muy lento, la app se queda colgada o aparece «La aplicación no responde» | Suele ser falta de memoria: los emuladores nuevos traen solo 2 GB de RAM. Cierra aplicaciones pesadas, reinicia el emulador (`android emulator stop <nombre>` y después `android emulator start <nombre>`) y vuelve a probar. |
 | El agente dice que has alcanzado la cuota | Espera a que se renueve (en Antigravity es semanal) o prueba con otro agente. |
-| Cualquier otro error | Copia el mensaje completo y mándamelo antes del workshop, así lo resolvemos con calma. |
+| Cualquier otro error | Copia el mensaje completo y envíalo a la organización antes del workshop, para que te pongan en contacto conmigo y lo resolvamos con calma. |

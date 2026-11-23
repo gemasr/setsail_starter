@@ -163,4 +163,4 @@ If you can tick all of these, you're ready:
 | Windows: the download from PowerShell fails or `android emulator` doesn't work | These are known limitations. Download from the official page and create the emulator from Android Studio. |
 | The emulator is very slow, the app freezes or "App isn't responding" appears | It's usually a lack of memory: new emulators come with only 2 GB of RAM. Close heavy applications, restart the emulator (`android emulator stop <name>` and then `android emulator start <name>`) and try again. |
 | The agent says you've reached the quota | Wait for it to renew (in Antigravity it is weekly) or try another agent. |
-| Any other error | Copy the full message and send it to me before the workshop, so we can sort it out calmly. |
+| Any other error | Copy the full message and send it to the organizers before the workshop, so they can put you in touch with me and we can sort it out calmly. |
