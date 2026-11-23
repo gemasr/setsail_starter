@@ -19,11 +19,12 @@ It's a small app on purpose. Data lives in memory and is loaded from sample data
 | Topic | Where you'll see it |
 |---|---|
 | Giving the agent stable context with `AGENTS.md` (conventions) and `SPEC.md` (what to build) | All milestones |
+| Setting up Android CLI and its skill with `android init` | Milestone 1 |
 | Creating a project with `android create` | Milestone 1 |
 | Building, installing and launching the app with `android run`, on an emulator managed with `android emulator` | Milestone 1 onwards |
 | Giving the agent up-to-date knowledge with skills (`android skills`) and the official documentation (`android docs`) | Milestone 2 |
-| Letting the agent see the app with `android layout` and `android screen capture` | Milestones 3 to 5 |
-| Letting the agent test the app with `android input` and journeys | Milestone 6 |
+| Letting the agent see the app with `android layout` and `android screen capture` | Milestone 3 |
+| Letting the agent test the app with `android input` and journeys | Milestone 4 |
 
 ## Before the workshop
 
@@ -46,12 +47,12 @@ Tip: start a **new agent session for each milestone**. Each milestone comes with
 
 | Milestone | What you get |
 |---|---|
-| [Milestone 1](Milestones/STEP_1.md) | The Android project created with Android CLI, building and running on the emulator |
-| [Milestone 2](Milestones/STEP_2.md) | The data model, the sample data and the navigation skeleton with three destinations |
-| [Milestone 3](Milestones/STEP_3.md) | The Pantry screen working: view, add and edit ingredients |
-| [Milestone 4](Milestones/STEP_4.md) | The recipes and their detail, with what you can cook and what's missing |
-| [Milestone 5](Milestones/STEP_5.md) | The shopping list, built from the missing ingredients |
-| [Milestone 6](Milestones/STEP_6.md) | Journeys: the agent writes and runs tests that walk through the app like a user |
+| [Milestone 1](Milestones/STEP_1.md) | Android CLI set up with `android init`, and the Android project created, building and running on the emulator |
+| [Milestone 2](Milestones/STEP_2.md) | The navigation skeleton with three destinations, set up with the `navigation-3` skill |
+| [Milestone 3](Milestones/STEP_3.md) | A visual bug in the app, found by the agent with `android layout` and `android screen capture` |
+| [Milestone 4](Milestones/STEP_4.md) | Journeys: the agent runs tests that walk through the app like a user |
+
+Want to build the whole app yourself? The steps the workshop skips (data model, Pantry, Recipes and Shopping) are in [extra/](extra/README.md).
 
 ## What's in this folder
 
@@ -59,6 +60,7 @@ Tip: start a **new agent session for each milestone**. Each milestone comes with
 |---|---|
 | `PREREQUISITES.md` | What to install and check before the workshop |
 | `Milestones/` | The workshop steps, one per file |
+| `extra/` | Optional steps to build the whole app at home |
 | `SPEC.md` | The app specification: data, business rules and exact texts |
 | `../util/AGENTS.md` | The project conventions for the agent (architecture, libraries, how to work) |
 

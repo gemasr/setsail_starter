@@ -1,14 +1,15 @@
 ## Objetivo
 
-Crear el proyecto Android con Android CLI y dejarlo compilando.
+Instalar la skill de Android CLI, crear el proyecto Android y dejarlo compilando y ejecutándose en el emulador.
 
 ## Antes del prompt
 
-El agente necesita leer `AGENTS.md` para saber cómo trabajar, así que tiene que existir antes de lanzar el prompt.
+El agente necesita leer `AGENTS.md` para saber cómo trabajar y necesita la skill `android-cli` para saber cómo usar Android CLI, así que ambas tienen que estar listas antes de lanzar el prompt.
 
-1. Crea una carpeta vacía llamada `SanjisGalley`.
-2. Copia dentro `AGENTS.md` (de la carpeta `util` del starter) y `SPEC.md` (de la carpeta `es`).
-3. Abre el agente en esa carpeta.
+1. Ejecuta `android init` en una terminal. Configura Android CLI e instala la skill `android-cli` para tu agente.
+2. Crea una carpeta vacía llamada `SanjisGalley`.
+3. Copia dentro `AGENTS.md` (de la carpeta `util` del starter) y `SPEC.md` (de la carpeta `es`).
+4. Abre el agente en esa carpeta.
 
 ## Prompt
 

@@ -19,11 +19,12 @@ Es una app pequeña a propósito. Los datos viven en memoria y se cargan desde u
 | Tema | Dónde lo verás |
 |---|---|
 | Darle contexto estable al agente con `AGENTS.md` (convenciones) y `SPEC.md` (qué construir) | Todos los hitos |
+| Preparar Android CLI y su skill con `android init` | Hito 1 |
 | Crear un proyecto con `android create` | Hito 1 |
 | Compilar, instalar y lanzar la app con `android run`, sobre un emulador gestionado con `android emulator` | Hito 1 en adelante |
 | Dar al agente conocimiento actualizado con las skills (`android skills`) y la documentación oficial (`android docs`) | Hito 2 |
-| Que el agente vea la app con `android layout` y `android screen capture` | Hitos 3 a 5 |
-| Que el agente pruebe la app con `android input` y los journeys | Hito 6 |
+| Que el agente vea la app con `android layout` y `android screen capture` | Hito 3 |
+| Que el agente pruebe la app con `android input` y los journeys | Hito 4 |
 
 ## Antes del workshop
 
@@ -46,12 +47,12 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 
 | Hito | Qué consigues |
 |---|---|
-| [Hito 1](Hitos/STEP_1.md) | El proyecto Android creado con Android CLI, compilando y ejecutándose en el emulador |
-| [Hito 2](Hitos/STEP_2.md) | El modelo de datos, los datos de ejemplo y el esqueleto de navegación con tres destinos |
-| [Hito 3](Hitos/STEP_3.md) | La pantalla de Despensa funcionando: ver, añadir y editar ingredientes |
-| [Hito 4](Hitos/STEP_4.md) | Las recetas y su detalle, con lo que se puede cocinar y lo que falta |
-| [Hito 5](Hitos/STEP_5.md) | La lista de la compra, construida a partir de los faltantes |
-| [Hito 6](Hitos/STEP_6.md) | Journeys: el agente escribe y ejecuta pruebas que recorren la app como una persona usuaria |
+| [Hito 1](Hitos/STEP_1.md) | Android CLI preparado con `android init`, y el proyecto Android creado, compilando y ejecutándose en el emulador |
+| [Hito 2](Hitos/STEP_2.md) | El esqueleto de navegación con tres destinos, montado con la skill `navigation-3` |
+| [Hito 3](Hitos/STEP_3.md) | Un fallo visual en la app, encontrado por el agente con `android layout` y `android screen capture` |
+| [Hito 4](Hitos/STEP_4.md) | Journeys: el agente ejecuta pruebas que recorren la app como una persona usuaria |
+
+¿Quieres construir la app entera tú? Los pasos que el taller se salta (modelo de datos, Despensa, Recetas y Compra) están en [extra/](extra/README.md).
 
 ## Qué hay en esta carpeta
 
@@ -59,6 +60,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 |---|---|
 | `INSTRUCCIONES_PREVIAS.md` | Qué instalar y comprobar antes del taller |
 | `Hitos/` | Los pasos del taller, uno por archivo |
+| `extra/` | Pasos opcionales para construir la app entera en casa |
 | `SPEC.md` | La especificación de la app: datos, reglas de negocio y textos exactos |
 | `../util/AGENTS.md` | Las convenciones del proyecto para el agente (arquitectura, librerías, cómo trabajar) |
 

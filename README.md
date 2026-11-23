@@ -17,6 +17,7 @@ Taller para aprender a trabajar con **Android CLI** y **agentes de código** con
 |---|---|
 | `es/` | Workshop in Spanish: prerequisites, milestones and `SPEC.md` |
 | `en/` | Workshop in English: prerequisites, milestones and `SPEC.md` |
+| `extra/` (inside `es/` and `en/`) | Optional steps to build the whole app at home / Pasos opcionales para construir la app entera en casa |
 | `util/` | `AGENTS.md`, the project conventions for the agent, shared by both languages |
 
 ## Before the workshop / Antes del workshop

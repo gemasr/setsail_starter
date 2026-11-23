@@ -1,14 +1,15 @@
 ## Goal
 
-Create the Android project with Android CLI and get it building.
+Install the Android CLI skill, create the Android project and get it building and running on the emulator.
 
 ## Before the prompt
 
-The agent needs to read `AGENTS.md` to know how to work, so it has to exist before you run the prompt.
+The agent needs to read `AGENTS.md` to know how to work, and it needs the `android-cli` skill to know how to use Android CLI, so both have to be in place before you run the prompt.
 
-1. Create an empty folder called `SanjisGalley`.
-2. Copy `AGENTS.md` (from the starter's `util` folder) and `SPEC.md` (from the `en` folder) into it.
-3. Open the agent in that folder.
+1. Run `android init` in a terminal. It sets up Android CLI and installs the `android-cli` skill for your agent.
+2. Create an empty folder called `SanjisGalley`.
+3. Copy `AGENTS.md` (from the starter's `util` folder) and `SPEC.md` (from the `en` folder) into it.
+4. Open the agent in that folder.
 
 ## Prompt
 

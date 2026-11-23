@@ -1,15 +1,34 @@
 ## Objetivo
 
-Tener el modelo, los datos de ejemplo y el esqueleto de navegación.
+Dar al agente conocimiento actualizado con una skill y usarla para montar el esqueleto de navegación de la app.
+
+## Antes del prompt
+
+El agente usará la skill `navigation-3`, que le enseña a configurar bien Jetpack Navigation 3.
+
+1. Comprueba que la skill está instalada:
+
+   ```
+   android skills list
+   ```
+
+2. Si `navigation-3` no aparece en la lista, instálala:
+
+   ```
+   android skills add navigation-3
+   ```
+
+3. Abre el agente en la carpeta del proyecto, en una **sesión nueva**.
 
 ## Prompt
 
 ```
-Lee SPEC.md y mira el código actual del proyecto. Implementa el modelo de datos y la carga de los datos de ejemplo (entidades, reglas de negocio y datos de ejemplo de SPEC.md), y monta el esqueleto de la app: barra de navegación inferior con tres destinos (Despensa, Recetas, Compra), en ese orden, cada uno con una pantalla provisional que muestre solo su título. El destino inicial es Recetas. No implementes todavía el contenido de las pantallas. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
+Usa la skill navigation-3. Mira el código actual del proyecto y monta el esqueleto de la app: barra de navegación inferior con tres destinos (Despensa, Recetas, Compra), en ese orden, cada uno con una pantalla provisional que muestre solo su título. El destino inicial es Recetas. Usa los textos exactos de SPEC.md. No implementes nada más. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
 ```
 
 ## Comprobación
 
+- [ ]  El agente dice que ha usado la skill `navigation-3`
 - [ ]  La app compila y abre en **Recetas**
 - [ ]  Puedes navegar entre **Despensa**, **Recetas** y **Compra**
 

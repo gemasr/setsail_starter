@@ -1,23 +1,39 @@
 ## Objetivo
 
-La pantalla de Despensa funcionando, con datos reales.
+Encontrar un fallo visual dejando que el agente mire la app con `android layout` y `android screen capture`.
+
+## Antes del prompt
+
+A partir de aquí la app ya está construida: empiezas desde un checkpoint en lugar de escribir tú las pantallas de Despensa, Recetas y Compra.
+
+1. Descarga el checkpoint del Hito 3: [dv-mad-step-3.zip](https://github.com/gemasr/sanjis_galley/archive/refs/tags/dv-mad-step-3.zip).
+2. Descomprímelo en una **carpeta nueva**. No reutilices la de los hitos anteriores.
+3. Abre el agente en esa carpeta, en una **sesión nueva**. La carpeta ya contiene `AGENTS.md` y `SPEC.md`.
+4. Compílala y ejecútala en el emulador, con el agente o con `android run`.
+
+## El síntoma
+
+Abre la receta **Ramen del Baratie**. El botón "Añadir faltantes a la compra" no funciona bien: cuesta verlo o pulsarlo. La app compila y no se cierra, así que no hay ningún mensaje de error que leer.
+
+No te contamos la causa. La idea es que el agente la encuentre mirando la pantalla.
 
 ## Prompt
 
 ```
-Lee SPEC.md y mira el código actual. Implementa la pantalla Despensa: una lista de los ingredientes de la despensa con su cantidad y unidad (por ejemplo "Huevo · 6 ud"), cargada con los datos de ejemplo. Añade el botón "Añadir ingrediente", que abre un formulario con el nombre (elegido entre los ingredientes conocidos) y la cantidad, y un botón "Guardar". Tocar un elemento permite editar su cantidad. No se puede guardar una cantidad vacía o 0. Si se añade un ingrediente que ya existe, se suma la cantidad en la misma línea. Si la despensa está vacía, muestra "La despensa está vacía". Usa los textos exactos de SPEC.md. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
+En el detalle de la receta "Ramen del Baratie", el botón "Añadir faltantes a la compra" no se ve ni se comporta bien. Usa android layout y android screen capture para ver cómo se muestra la pantalla en el emulador, averigua por qué, corrígelo y comprueba el resultado con los mismos comandos. Cuéntame qué has encontrado y qué has cambiado.
 ```
 
 ## Comprobación
 
-- [ ]  Ves "Huevo · 6 ud" y "Arroz · 1000 g"
-- [ ]  Añades "Nata" con 250 y aparece "Nata · 250 ml"
-- [ ]  Añades "Huevo" con 2 y la línea pasa a "Huevo · 8 ud" (sin duplicar)
-
-Si cierras y vuelves a abrir la app, los datos vuelven a los de ejemplo: es lo esperado, porque viven en memoria.
+- [ ]  El agente usó `android layout` y `android screen capture` antes de tocar el código
+- [ ]  El agente explica la causa con sus palabras
+- [ ]  En "Ramen del Baratie", el botón se ve entero y puedes pulsarlo
+- [ ]  El resto de la app sigue funcionando
 
 ## Si te atascas
 
 ```
-Revisa tu implementación contra los criterios de comprobación de este hito y corrige lo que falle.
+Muéstrame el layout y la captura que estás mirando, y dime qué ves en ellos.
 ```
+
+Si te quedas sin cuota, o quieres comparar, la solución está en la rama [dv-mad-step-3-solution](https://github.com/gemasr/sanjis_galley/compare/dv-mad-step-3...dv-mad-step-3-solution). Descarga su zip, o aplica el diff, y pasa al siguiente hito.
