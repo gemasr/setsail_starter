@@ -1,6 +1,6 @@
 ## Goal
 
-Check the app with journeys that describe what a user does. In this milestone the agent runs a journey that is already written, and then you can ask it to write its own: pay attention to which Android CLI commands it uses to walk through the app and how it reports the result.
+Check the app with journeys that describe what a user does. In this milestone the agent writes the journeys and runs them: pay attention to how it writes them, which Android CLI commands it uses to walk through the app and how it reports the result.
 
 Journeys are saved in the `journeys/` folder at the project root, as `AGENTS.md` indicates.
 
@@ -8,20 +8,20 @@ Steps that start with `Check` or `Verify` are assertions; the rest are interacti
 
 ## Before the prompt
 
-Start from the Milestone 4 checkpoint, which already includes the level 1 journey in `journeys/`:
+Start from the Milestone 4 checkpoint (the app, with no journeys yet):
 
 1. Download [dv-mad-step-4.zip](https://github.com/gemasr/sanjis_galley/archive/refs/tags/dv-mad-step-4.zip) and unzip it into a **new folder**.
 2. Open the agent in that folder, in a **new session**.
 
 There is no `android` command that runs a journey by itself: the agent reads the XML and walks through the app with `android input`, `android layout` and `android screen capture`, as the `android-cli` skill explains.
 
-## Level 1: run a journey (required)
-
-Open `journeys/baratie-ramen-shopping.xml` and read it first: it's plain XML.
+## Level 1: a simple journey (required)
 
 ```
-Run the journey in journeys/baratie-ramen-shopping.xml using Android CLI and tell me the result. Show me which Android CLI commands you used for each step.
+Write a journey that checks the following and run it: in the recipe "Baratie Ramen", when pressing "Add missing to shopping list", the notice "Added to the shopping list" appears and in Shopping "Wheat noodles · 200 g" and "Fish stock · 500 ml" appear. Save it in journeys/, use Android CLI to run it and tell me the result.
 ```
+
+Open the journey the agent saved in `journeys/`: it's plain XML.
 
 ## Level 2 (optional): checking a state change
 
@@ -39,7 +39,7 @@ This is the one that most often fails the first time: repeated quantities must b
 
 ## Checks
 
-- [ ]  Level 1 runs and passes
+- [ ]  There is a level 1 journey in `journeys/` and it passes
 - [ ]  You can say which Android CLI commands the agent used for each step
 - [ ]  If you did levels 2 and 3, there is a journey in `journeys/` for each and they pass
 - [ ]  If one fails, ask the agent to explain why and fix it

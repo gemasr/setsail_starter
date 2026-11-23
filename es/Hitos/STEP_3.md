@@ -13,21 +13,21 @@ A partir de aquí la app ya está construida: empiezas desde un checkpoint en lu
 
 ## El síntoma
 
-Abre la receta **Ramen del Baratie**. El botón "Añadir faltantes a la compra" no funciona bien: cuesta verlo o pulsarlo. La app compila y no se cierra, así que no hay ningún mensaje de error que leer.
+Abre la pestaña **Despensa**. El botón "Añadir ingrediente" no aparece por ningún lado, así que no puedes añadir nada, y el primer elemento de la lista se dibuja encima de la barra de estado. La app compila y no se cierra, así que no hay ningún mensaje de error que leer.
 
 No te contamos la causa. La idea es que el agente la encuentre mirando la pantalla.
 
 ## Prompt
 
 ```
-En el detalle de la receta "Ramen del Baratie", el botón "Añadir faltantes a la compra" no se ve ni se comporta bien. Usa android layout y android screen capture para ver cómo se muestra la pantalla en el emulador, averigua por qué, corrígelo y comprueba el resultado con los mismos comandos. Cuéntame qué has encontrado y qué has cambiado.
+En la pantalla Despensa el botón "Añadir ingrediente" no se ve y la lista empieza bajo la barra de estado. Usa android layout y android screen capture para ver cómo se muestra la pantalla en el emulador, averigua por qué, corrígelo y comprueba el resultado con los mismos comandos. Cuéntame qué has encontrado y qué has cambiado.
 ```
 
 ## Comprobación
 
 - [ ]  El agente usó `android layout` y `android screen capture` antes de tocar el código
 - [ ]  El agente explica la causa con sus palabras
-- [ ]  En "Ramen del Baratie", el botón se ve entero y puedes pulsarlo
+- [ ]  En Despensa, el botón "Añadir ingrediente" se ve y la lista empieza bajo la barra de estado
 - [ ]  El resto de la app sigue funcionando
 
 ## Si te atascas

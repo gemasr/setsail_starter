@@ -1,6 +1,6 @@
 ## Objetivo
 
-Comprobar la app con journeys que describen lo que hace una persona usuaria. En este hito el agente ejecuta un journey que ya está escrito y después puedes pedirle que escriba los suyos: fíjate en qué comandos de Android CLI usa para recorrer la app y cómo cuenta el resultado.
+Comprobar la app con journeys que describen lo que hace una persona usuaria. En este hito el agente escribe los journeys y los ejecuta: fíjate en cómo los redacta, qué comandos de Android CLI usa para recorrer la app y cómo cuenta el resultado.
 
 Los journeys se guardan en la carpeta `journeys/` de la raíz del proyecto, como indica `AGENTS.md`.
 
@@ -8,20 +8,20 @@ Verás que los pasos del XML están en inglés (`Tap`, `Verify`...) aunque los t
 
 ## Antes del prompt
 
-Empieza desde el checkpoint del Hito 4, que ya incluye el journey del nivel 1 en `journeys/`:
+Empieza desde el checkpoint del Hito 4 (la app, todavía sin journeys):
 
 1. Descarga [dv-mad-step-4.zip](https://github.com/gemasr/sanjis_galley/archive/refs/tags/dv-mad-step-4.zip) y descomprímelo en una **carpeta nueva**.
 2. Abre el agente en esa carpeta, en una **sesión nueva**.
 
 No existe ningún comando de `android` que ejecute un journey por sí solo: el agente lee el XML y recorre la app con `android input`, `android layout` y `android screen capture`, como explica la skill `android-cli`.
 
-## Nivel 1: ejecutar un journey (obligatorio)
-
-Abre `journeys/ramen-faltantes-a-la-compra.xml` y léelo antes: es XML normal.
+## Nivel 1: un journey sencillo (obligatorio)
 
 ```
-Ejecuta el journey de journeys/ramen-faltantes-a-la-compra.xml usando Android CLI y cuéntame el resultado. Enséñame qué comandos de Android CLI has usado en cada paso.
+Escribe un journey que compruebe lo siguiente y ejecútalo: en la receta "Ramen del Baratie", al pulsar "Añadir faltantes a la compra", aparece el aviso "Añadido a la lista de la compra" y en Compra aparecen "Fideos de trigo · 200 g" y "Caldo de pescado · 500 ml". Guárdalo en journeys/, usa Android CLI para ejecutarlo y cuéntame el resultado.
 ```
+
+Abre el journey que el agente guardó en `journeys/`: es XML normal.
 
 ## Nivel 2 (opcional): comprobar un cambio de estado
 
@@ -39,7 +39,7 @@ Este es el que más suele fallar a la primera: las cantidades repetidas deben su
 
 ## Comprobación
 
-- [ ]  El nivel 1 se ejecuta y pasa
+- [ ]  Hay un journey del nivel 1 en `journeys/` y pasa
 - [ ]  Sabes decir qué comandos de Android CLI usó el agente en cada paso
 - [ ]  Si hiciste los niveles 2 y 3, hay un journey en `journeys/` por cada uno y pasan
 - [ ]  Si falla, pide al agente que explique por qué y lo corrija

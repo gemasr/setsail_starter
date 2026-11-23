@@ -13,21 +13,21 @@ From here on, the app is already built: you start from a checkpoint instead of w
 
 ## The symptom
 
-Open the recipe **Baratie Ramen**. The "Add missing to shopping list" button doesn't work well: it's hard to see or to tap. The app builds and nothing crashes, so there is no error message to read.
+Open the **Pantry** tab. The "Add ingredient" button is nowhere to be seen, so you can't add anything, and the first item of the list is drawn on top of the status bar. The app builds and nothing crashes, so there is no error message to read.
 
 You won't be told the cause. The point is to let the agent find it by looking at the screen.
 
 ## Prompt
 
 ```
-In the detail of the recipe "Baratie Ramen", the "Add missing to shopping list" button doesn't look or behave right. Use android layout and android screen capture to see what the screen looks like on the emulator, find out why, fix it, and check the result with the same commands. Tell me what you found and what you changed.
+In the Pantry screen the "Add ingredient" button is not visible and the list starts under the status bar. Use android layout and android screen capture to see what the screen looks like on the emulator, find out why, fix it, and check the result with the same commands. Tell me what you found and what you changed.
 ```
 
 ## Checks
 
 - [ ]  The agent used `android layout` and `android screen capture` before touching the code
 - [ ]  The agent explains the cause in its own words
-- [ ]  In "Baratie Ramen", the button is fully visible and you can tap it
+- [ ]  In Pantry, the "Add ingredient" button is visible and the list starts below the status bar
 - [ ]  The rest of the app still works
 
 ## If you get stuck
