@@ -4,7 +4,7 @@ Comprobar la app con journeys que describen lo que hace una persona usuaria. En 
 
 Los journeys se guardan en la carpeta `journeys/` de la raíz del proyecto, como indica `AGENTS.md`.
 
-Verás que los pasos del XML están en inglés (`Tap`, `Verify`...) aunque los textos de la app estén en español. Es el formato que usa Android CLI: las acciones que empiezan por `Check` o `Verify` se tratan como comprobaciones, y el resto como interacciones.
+Los pasos que empiezan por `Check` o `Verify` son comprobaciones; el resto, interacciones.
 
 ## Antes del prompt
 
@@ -18,7 +18,7 @@ No existe ningún comando de `android` que ejecute un journey por sí solo: el a
 ## Nivel 1: un journey sencillo (obligatorio)
 
 ```
-Escribe un journey que compruebe lo siguiente y ejecútalo: en la receta "Ramen del Baratie", al pulsar "Añadir faltantes a la compra", aparece el aviso "Añadido a la lista de la compra" y en Compra aparecen "Fideos de trigo · 200 g" y "Caldo de pescado · 500 ml". Guárdalo en journeys/, usa Android CLI para ejecutarlo y cuéntame el resultado.
+Escribe un journey que compruebe lo siguiente y ejecútalo: en la receta "Baratie Ramen", al pulsar "Add missing to shopping list", aparece el aviso "Added to the shopping list" y en Shopping aparecen "Wheat noodles · 200 g" y "Fish stock · 500 ml". Guárdalo en journeys/, usa Android CLI para ejecutarlo y cuéntame el resultado.
 ```
 
 Abre el journey que el agente guardó en `journeys/`: es XML normal.
@@ -26,13 +26,13 @@ Abre el journey que el agente guardó en `journeys/`: es XML normal.
 ## Nivel 2 (opcional): comprobar un cambio de estado
 
 ```
-Escribe un journey que compruebe lo siguiente y ejecútalo: al añadir 250 ml de nata a la despensa, la receta "Mellorine para Nami y Robin" pasa de "Falta 1 ingrediente" a "Disponible". Usa Android CLI para ejecutarlo.
+Escribe un journey que compruebe lo siguiente y ejecútalo: al añadir 250 ml de nata a la despensa, la receta "Mellorine for Nami and Robin" pasa de "Missing 1 ingredient" a "Available". Usa Android CLI para ejecutarlo.
 ```
 
 ## Nivel 3 (opcional): el caso difícil
 
 ```
-Escribe y ejecuta un journey que compruebe lo siguiente: añado a la compra los faltantes de "Ramen del Baratie" y luego los de "Guiso del Thousand Sunny"; en Compra debe aparecer "Caldo de pescado · 800 ml" en una sola línea. Usa Android CLI para ejecutarlo.
+Escribe y ejecuta un journey que compruebe lo siguiente: añado a la compra los faltantes de "Baratie Ramen" y luego los de "Thousand Sunny Stew"; en Shopping debe aparecer "Fish stock · 800 ml" en una sola línea. Usa Android CLI para ejecutarlo.
 ```
 
 Este es el que más suele fallar a la primera: las cantidades repetidas deben sumarse en una sola línea.

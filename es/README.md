@@ -52,7 +52,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 | [Hito 3](Hitos/STEP_3.md) | Un fallo visual en la app, encontrado por el agente con `android layout` y `android screen capture` |
 | [Hito 4](Hitos/STEP_4.md) | Journeys: el agente ejecuta pruebas que recorren la app como una persona usuaria |
 
-¿Quieres construir la app entera tú? Los pasos que el taller se salta (modelo de datos, Despensa, Recetas y Compra) están en [extra/](extra/README.md).
+¿Quieres construir la app entera tú? Los pasos que el taller se salta (modelo de datos, Pantry, Recipes y Shopping) están en [extra/](extra/README.md).
 
 ## Qué hay en esta carpeta
 

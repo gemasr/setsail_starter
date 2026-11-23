@@ -10,8 +10,8 @@ Lee SPEC.md y mira el código actual del proyecto. Implementa el modelo de datos
 
 ## Comprobación
 
-- [ ]  La app compila y sigue abriendo en **Recetas**
-- [ ]  Sigues pudiendo navegar entre **Despensa**, **Recetas** y **Compra**
+- [ ]  La app compila y sigue abriendo en **Recipes**
+- [ ]  Sigues pudiendo navegar entre **Pantry**, **Recipes** y **Shopping**
 
 ## Si te atascas
 

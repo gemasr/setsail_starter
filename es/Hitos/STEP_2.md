@@ -23,14 +23,14 @@ El agente usará la skill `navigation-3`, que le enseña a configurar bien Jetpa
 ## Prompt
 
 ```
-Usa la skill navigation-3. Mira el código actual del proyecto y monta el esqueleto de la app: barra de navegación inferior con tres destinos (Despensa, Recetas, Compra), en ese orden, cada uno con una pantalla provisional que muestre solo su título. El destino inicial es Recetas. Usa los textos exactos de SPEC.md. No implementes nada más. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
+Usa la skill navigation-3. Mira el código actual del proyecto y monta el esqueleto de la app: barra de navegación inferior con tres destinos (Pantry, Recipes, Shopping), en ese orden, cada uno con una pantalla provisional que muestre solo su título. El destino inicial es Recipes. Usa los textos exactos de SPEC.md. No implementes nada más. Cuando termines, compila, ejecútala en el emulador y comprueba la pantalla usando Android CLI, y dime qué has verificado.
 ```
 
 ## Comprobación
 
 - [ ]  El agente dice que ha usado la skill `navigation-3`
-- [ ]  La app compila y abre en **Recetas**
-- [ ]  Puedes navegar entre **Despensa**, **Recetas** y **Compra**
+- [ ]  La app compila y abre en **Recipes**
+- [ ]  Puedes navegar entre **Pantry**, **Recipes** y **Shopping**
 
 ## Si te atascas
 

@@ -5,7 +5,7 @@ El taller va del Hito 1 al 4 con un checkpoint en medio, así que la app no se c
 | Paso | Qué consigues |
 |---|---|
 | [Extra 1](EXTRA_1_MODELO.md) | El modelo de datos y los datos de ejemplo |
-| [Extra 2](EXTRA_2_DESPENSA.md) | La pantalla de Despensa funcionando: ver, añadir y editar ingredientes |
+| [Extra 2](EXTRA_2_DESPENSA.md) | La pantalla de Pantry funcionando: ver, añadir y editar ingredientes |
 | [Extra 3](EXTRA_3_RECETAS.md) | Las recetas y su detalle, con lo que se puede cocinar y lo que falta |
 | [Extra 4](EXTRA_4_COMPRA.md) | La lista de la compra, construida a partir de los faltantes |
 
