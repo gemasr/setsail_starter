@@ -1,73 +1,31 @@
 # Set Sail for the Grand Line — Prerequisites
 
-## What we're going to do
+Arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging).
 
-To make the most of the workshop, arrive with three things working: **Android CLI**, **an AI agent in the terminal** and **an emulator** (or a phone with USB debugging). Set aside some quiet time: most of it is downloads.
+- **Time:** about 30–40 minutes, mostly downloads (several GB). Use a good connection.
+- **Don't create any project:** we'll do that together in the workshop.
+- **Already have something installed?** Skip that step.
 
-You don't need to create any project. We'll work on it together during the workshop, and the instructions work whichever agent you choose.
+> **Windows:** install Android CLI with `winget install --id Google.AndroidCLI` or the installer from the [official page](https://developer.android.com/tools/agents).
 
-> **Note:** if you already have something installed that is asked for here, skip that step. For example, if you already have Android Studio you don't need to install it again, although it's a good idea to keep it up to date.
+## 1. Install Android Studio and Android CLI
 
-## What you need
-
-- A laptop with macOS, Linux or Windows and a good connection: several GB are downloaded.
-- [Android Studio](https://developer.android.com/studio) in its stable version, opened at least once so it finishes downloading the Android SDK. We'll use it for the emulator and to open the project at the end.
-- An account for the agent you choose (for example, a Google account for Antigravity CLI). The options are listed below.
-- If you use **Windows**, read the warnings in Step 1: there are two known limitations at the moment.
-
-## Step 1 · Install Android CLI
-
-1. Download Android CLI from the [official page](https://developer.android.com/tools/agents) and follow the instructions for your system.
-2. Open a new terminal and update to the latest version:
+1. Install [Android Studio](https://developer.android.com/studio) (stable) and **open it once**: the setup wizard downloads the Android SDK.
+2. Install Android CLI from the [official page](https://developer.android.com/tools/agents).
+3. In a **new terminal**:
 
 ```
 android update
+android -V && java -version && adb version
 ```
 
-3. Check that it works:
+✅ You should see three versions. If `java` or `adb` fails, see [Common problems](#common-problems).
 
-```
-android -V
-android info
-```
+## 2. Install an AI agent
 
-`android info` tells you which Android SDK it is using.
+**Already use a command-line agent (Claude Code, Copilot CLI…)? Skip this step.**
 
-**Also check that Java is on your PATH.** Some Android CLI features and the `gradlew` script of the projects need it. Run in a new terminal:
-
-```
-java -version
-```
-
-If it isn't recognized, install a JDK or add to the PATH the one bundled with Android Studio, and set the `JAVA_HOME` variable pointing to it. Then open another terminal and repeat the check.
-
-**Also check `adb`.** The agent uses it to drive the app on the emulator during journeys. Run:
-
-```
-adb version
-```
-
-If it isn't recognized, it's in the `platform-tools` folder of your SDK (`android info` gives you the SDK path). Add it to the PATH, open another terminal and repeat the check.
-
-**Windows warnings** (according to the [official documentation](https://developer.android.com/tools/agents/android-cli)): for now, downloading Android CLI from PowerShell is not supported, and the `android emulator` command is disabled. In that case, create the emulator from Android Studio (Device Manager) or use a phone with USB debugging.
-
-## Step 2 · Choose and install an agent
-
-**If you already have a command-line agent installed with a subscription, skip this step.** It's only for people who have no subscription and don't currently use any agent.
-
-Choose **only one**. Any of these works for the workshop; if you don't want to pay, the free options are Antigravity CLI and OpenCode.
-
-> **Note:** this workshop has only been tested with Copilot CLI, Claude Code and Antigravity CLI. Other agents may not behave the same way. You can also use any other agent that isn't in the table, as long as it can be used from the console.
-
-| Agent | Cost | What to keep in mind |
-| --- | --- | --- |
-| Antigravity CLI (`agy`) | Free with a Google account, with a limited weekly quota | It replaces Gemini CLI. The free quota is tighter than the old one; [Google doesn't publish exact figures](https://www.cloudzero.com/blog/google-antigravity-pricing/). |
-| OpenCode | Free with the included models (OpenCode Zen); it also accepts your own key | The [free models](https://www.desarrollolibre.net/blog/ia/opencode-complete-guide-to-the-code-agent-with-artificial-intelligence) have limits, rotate and can be slower. |
-| Claude Code | Paid (Claude subscription or API key) | It has no free plan. |
-| GitHub Copilot CLI | Included in Copilot Free, with very limited monthly usage | Since June 2026 it is billed by AI credits; with the free plan the limit is low. |
-| Gemini CLI | No longer free with a personal Google account since June 18, 2026 | [Google has replaced it](https://github.com/google-gemini/gemini-cli/discussions/28017) with Antigravity CLI. |
-
-### Install Antigravity CLI
+No agent? Install Antigravity CLI, which is free with a Google account:
 
 ```
 # macOS / Linux
@@ -77,90 +35,62 @@ curl -fsSL https://antigravity.google/cli/install.sh | bash
 irm https://antigravity.google/cli/install.ps1 | iex
 ```
 
-Run `agy` and sign in with your Google account. Inside the session, `/usage` shows how much quota you have left.
+Then run `agy` and sign in with your Google account.
 
-### Install OpenCode
+✅ The agent starts and you are signed in.
 
-```
-curl -fsSL https://opencode.ai/install | sh
-```
+Other options, costs and quota: see the [appendix](#appendix-agents-and-quota).
 
-Run `opencode` and type `/models` to see the available free models. On Windows, follow the official OpenCode documentation.
+## 3. Heavy downloads (start them and let them run)
 
-### Claude Code or Copilot CLI
+**3.1 · Emulator, from Android Studio.** Open **Device Manager → Create Device**, choose a phone, and pick the **Android 16 (API 36)** image with Google APIs (Studio downloads it for you). Then start it with ▶.
 
-Follow each tool's official installation guide and sign in with your account.
+✅ The emulator boots. You can use a phone with USB debugging instead.
 
-**Tip:** with a free plan, do a single short test and don't spend quota in the days before the workshop.
-
-**Quota during the workshop:** the workshop is designed to fit a limited quota. If you run out, you don't need to start over: Milestones 3 and 4 start from a checkpoint (a zip you download), so you can jump straight in.
-
-## Step 3 · Set up an emulator
-
-First download the Android 16 (API 36) platform and the system image for the emulator. They are several GB, so this is what takes longest: do it with time and a good connection.
-
-```
-android sdk install platforms/android-36
-android sdk install system-images/android-36/google_apis/<architecture>
-```
-
-Replace `<architecture>` according to your computer:
-
-- `arm64-v8a`: Macs with Apple silicon (M1 or later) and laptops with an ARM processor.
-- `x86_64`: Macs with an Intel processor and most Windows and Linux computers.
-
-Then, for the emulator, on macOS and Linux:
-
-```
-android emulator create
-android emulator list
-```
-
-Start the device once with `android emulator start <name>` to check that it works. On Windows, create it from Android Studio (Device Manager).
-
-## Step 4 · Download the documentation and the skills
-
-The first time they are used, `android docs` and `android skills` download their index and can take a couple of minutes. Do it now so you don't wait during the workshop:
-
-```
-android docs search "navigation 3"
-android skills list
-```
-
-If the first search hangs or fails with an index error, wait for it to finish, close it and run it again.
-
-## Step 5 · Warm up Gradle (optional, recommended)
-
-The first build of an Android project downloads Gradle and many libraries, and can take several minutes. Doing it now avoids dead time in Milestone 1. In a temporary folder:
+**3.2 · Gradle warm-up** (optional, recommended: saves several minutes in Milestone 1). Then delete the `WarmUp` folder:
 
 ```
 android create --name WarmUp --output WarmUp
 cd WarmUp
-./gradlew assembleDebug
+./gradlew assembleDebug        # Windows: gradlew.bat assembleDebug
 ```
 
-(On Windows use `gradlew.bat assembleDebug`.) When it finishes, delete the `WarmUp` folder. You don't need it again.
+## 4. Final check
 
-## Final check
+In a new terminal:
 
-If you can tick all of these, you're ready:
+```
+android info
+android emulator list
+```
 
-- [ ] `android -V` shows a version.
-- [ ] `android info` shows the path of your Android SDK.
-- [ ] `java -version` and `adb version` work in a new terminal.
-- [ ] `android docs search "navigation 3"` and `android skills list` return results.
-- [ ] Your agent starts and you have signed in.
-- [ ] The Android 16 platform is installed: `android sdk list` shows `platforms/android-36`.
-- [ ] An emulator starts, or you have a phone with USB debugging.
-- [ ] (Optional) The Gradle warm-up build finished.
-- [ ] Test with the agent: in an empty folder, ask it "Run `android --help` and tell me in one sentence what it can do". If it runs it and answers you, everything is connected correctly.
+You're ready if:
+
+- [ ] `android info` shows your SDK path.
+- [ ] `android emulator list` shows your emulator.
 
 ## Common problems
 
 | Symptom | What to try |
 | --- | --- |
-| `android: command not found` | Close and reopen the terminal. If it still happens, check that the installation folder is on your PATH. |
-| Windows: the download from PowerShell fails or `android emulator` doesn't work | These are known limitations. Download from the official page and create the emulator from Android Studio. |
-| The emulator is very slow, the app freezes or "App isn't responding" appears | It's usually a lack of memory: new emulators come with only 2 GB of RAM. Close heavy applications, restart the emulator (`android emulator stop <name>` and then `android emulator start <name>`) and try again. |
-| The agent says you've reached the quota | Wait for it to renew (in Antigravity it is weekly) or try another agent. |
+| `android: command not found` | Close and reopen the terminal. If it still fails, add the Android CLI installation folder to your PATH. |
+| `java: command not found` | Install a JDK, or add the one bundled with Android Studio to your PATH and set `JAVA_HOME` to it. Open a new terminal. |
+| `adb: command not found` | Add the `platform-tools` folder of your SDK to your PATH (`android info` shows the SDK path). Open a new terminal. |
+| The emulator is very slow or "App isn't responding" appears | Not enough memory. Close heavy apps, then `android emulator stop <name>` and `android emulator start <name>`. |
+| The agent says you've reached the quota | Wait for it to renew (weekly in Antigravity) or try another agent. |
 | Any other error | Copy the full message and send it to the organizers before the workshop, so they can put you in touch with me and we can sort it out calmly. |
+
+## Appendix: agents and quota
+
+Any agent that works from the console is valid. This workshop has only been tested with **Copilot CLI, Claude Code and Antigravity CLI**; others may not behave the same way.
+
+| Agent | Cost | What to keep in mind |
+| --- | --- | --- |
+| Antigravity CLI (`agy`) | Free with a Google account, with a limited weekly quota | It replaces Gemini CLI. The free quota is tighter than the old one; [Google doesn't publish exact figures](https://www.cloudzero.com/blog/google-antigravity-pricing/). Inside the session, `/usage` shows what's left. |
+| OpenCode | Free with the included models (OpenCode Zen); it also accepts your own key | The [free models](https://www.desarrollolibre.net/blog/ia/opencode-complete-guide-to-the-code-agent-with-artificial-intelligence) have limits, rotate and can be slower. Install: `curl -fsSL https://opencode.ai/install \| sh`, then `opencode` and `/models`. On Windows, follow its official documentation. |
+| Claude Code | Paid (Claude subscription or API key) | It has no free plan. Follow its official installation guide. |
+| GitHub Copilot CLI | Included in Copilot Free, with very limited monthly usage | Since June 2026 it is billed by AI credits; the free limit is low. Follow its official installation guide. |
+
+**With a free plan:** do a single short test and don't spend quota in the days before the workshop.
+
+**If you run out of quota during the workshop:** you don't need to start over. Milestones 3 and 4 start from a checkpoint (a zip you download), so you can jump straight in.

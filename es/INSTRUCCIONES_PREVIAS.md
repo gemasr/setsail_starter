@@ -1,73 +1,31 @@
 # Set Sail for the Grand Line — Preparación previa
 
-## Qué vamos a hacer
+Llega con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB).
 
-Para aprovechar el workshop tienes que llegar con tres cosas funcionando: **Android CLI**, **un agente de IA en la terminal** y **un emulador** (o un móvil con depuración USB). Reserva un rato tranquilo: casi todo el tiempo son descargas.
+- **Tiempo:** unos 30–40 minutos, casi todo descargas (varios GB). Usa una buena conexión.
+- **No crees ningún proyecto:** lo haremos juntos en el workshop.
+- **¿Ya tienes algo instalado?** Sáltate ese paso.
 
-No hace falta que crees ningún proyecto. Trabajaremos sobre él juntos durante el workshop, y las instrucciones valen sea cual sea el agente que elijas.
+> **Windows:** instala Android CLI con `winget install --id Google.AndroidCLI` o con el instalador de la [página oficial](https://developer.android.com/tools/agents).
 
-> **Nota:** si ya tienes instalado algo de lo que se pide aquí, sáltate ese paso. Por ejemplo, si ya tienes Android Studio no hace falta que lo instales de nuevo, aunque conviene tenerlo actualizado.
+## 1. Instalar Android Studio y Android CLI
 
-## Lo que necesitas
-
-- Un portátil con macOS, Linux o Windows y buena conexión: se descargan varios GB.
-- [Android Studio](https://developer.android.com/studio) en su versión estable, abierto al menos una vez para que termine de descargar el SDK de Android. Lo usaremos para el emulador y para abrir el proyecto al final.
-- Una cuenta para el agente que elijas (por ejemplo, de Google para Antigravity CLI). Más abajo tienes las opciones.
-- Si usas **Windows**, lee los avisos del Paso 1: hay dos limitaciones conocidas en este momento.
-
-## Paso 1 · Instalar Android CLI
-
-1. Descarga Android CLI desde la [página oficial](https://developer.android.com/tools/agents) y sigue las instrucciones para tu sistema.
-2. Abre una terminal nueva y actualiza a la última versión:
+1. Instala [Android Studio](https://developer.android.com/studio) (estable) y **ábrelo una vez**: el asistente de configuración descarga el SDK de Android.
+2. Instala Android CLI desde la [página oficial](https://developer.android.com/tools/agents).
+3. En una **terminal nueva**:
 
 ```
 android update
+android -V && java -version && adb version
 ```
 
-3. Comprueba que funciona:
+✅ Deberías ver tres versiones. Si falla `java` o `adb`, mira [Problemas frecuentes](#problemas-frecuentes).
 
-```
-android -V
-android info
-```
+## 2. Instalar un agente de IA
 
-`android info` te dice qué SDK de Android está usando.
+**¿Ya usas un agente de línea de comandos (Claude Code, Copilot CLI…)? Sáltate este paso.**
 
-**Comprueba también que Java está en el PATH.** Algunas funciones de Android CLI y el script `gradlew` de los proyectos lo necesitan. Ejecuta en una terminal nueva:
-
-```
-java -version
-```
-
-Si no lo reconoce, instala un JDK o añade al PATH el que incluye Android Studio, y define la variable `JAVA_HOME` apuntando a él. Después abre otra terminal y repite la comprobación.
-
-**Comprueba también `adb`.** El agente lo usa para manejar la app en el emulador durante los journeys. Ejecuta:
-
-```
-adb version
-```
-
-Si no lo reconoce, está en la carpeta `platform-tools` de tu SDK (la ruta del SDK te la da `android info`). Añádela al PATH, abre otra terminal y repite la comprobación.
-
-**Avisos para Windows** (según la [documentación oficial](https://developer.android.com/tools/agents/android-cli)): por ahora no se admite descargar Android CLI desde PowerShell, y el comando `android emulator` está desactivado. En ese caso crea el emulador desde Android Studio (Device Manager) o usa un móvil con depuración USB.
-
-## Paso 2 · Elegir e instalar un agente
-
-**Si ya tienes instalado un agente de línea de comandos con suscripción, sáltate este paso.** Es solo para quienes no tienen suscripción y no usan ningún agente actualmente.
-
-Elige **uno solo**. Para seguir el workshop sirve cualquiera de estos; si no quieres pagar, las opciones gratuitas son Antigravity CLI y OpenCode.
-
-> **Nota:** este workshop solo se ha probado con Copilot CLI, Claude Code y Antigravity CLI. Con otros agentes puede que algo no funcione igual. También puedes usar cualquier otro agente que no esté en la tabla, siempre que se pueda usar desde la consola.
-
-| Agente | Coste | Qué tener en cuenta |
-| --- | --- | --- |
-| Antigravity CLI (`agy`) | Gratis con cuenta de Google, con cuota semanal limitada | Es el sustituto de Gemini CLI. La cuota gratuita es más ajustada que la antigua; [Google no publica cifras exactas](https://www.cloudzero.com/blog/google-antigravity-pricing/). |
-| OpenCode | Gratis con los modelos incluidos (OpenCode Zen); también acepta tu propia clave | Los [modelos gratuitos](https://www.desarrollolibre.net/blog/ia/opencode-complete-guide-to-the-code-agent-with-artificial-intelligence) tienen límites, rotan y pueden ir más lentos. |
-| Claude Code | De pago (suscripción de Claude o clave de API) | No tiene plan gratuito. |
-| GitHub Copilot CLI | Incluido en Copilot Free, con uso mensual muy limitado | Desde junio de 2026 se factura por créditos de IA; con el plan gratuito el límite es bajo. |
-| Gemini CLI | Ya no es gratuito con cuenta personal de Google desde el 18 de junio de 2026 | [Google lo ha sustituido](https://github.com/google-gemini/gemini-cli/discussions/28017) por Antigravity CLI. |
-
-### Instalar Antigravity CLI
+¿Sin agente? Instala Antigravity CLI, que es gratis con una cuenta de Google:
 
 ```
 # macOS / Linux
@@ -77,90 +35,62 @@ curl -fsSL https://antigravity.google/cli/install.sh | bash
 irm https://antigravity.google/cli/install.ps1 | iex
 ```
 
-Ejecuta `agy` e inicia sesión con tu cuenta de Google. Dentro de la sesión, `/usage` te muestra cuánta cuota te queda.
+Después ejecuta `agy` e inicia sesión con tu cuenta de Google.
 
-### Instalar OpenCode
+✅ El agente arranca y has iniciado sesión.
 
-```
-curl -fsSL https://opencode.ai/install | sh
-```
+Otras opciones, costes y cuota: mira el [apéndice](#apéndice-agentes-y-cuota).
 
-Ejecuta `opencode` y escribe `/models` para ver los modelos gratuitos disponibles. En Windows, sigue la documentación oficial de OpenCode.
+## 3. Descargas pesadas (lánzalas y déjalas correr)
 
-### Claude Code o Copilot CLI
+**3.1 · Emulador, desde Android Studio.** Abre **Device Manager → Create Device**, elige un teléfono y selecciona la imagen **Android 16 (API 36)** con Google APIs (Studio la descarga por ti). Después arráncalo con ▶.
 
-Sigue la guía oficial de instalación de cada herramienta e inicia sesión con tu cuenta.
+✅ El emulador arranca. Puedes usar un móvil con depuración USB en su lugar.
 
-**Consejo:** con un plan gratuito, haz una única prueba corta y no gastes cuota los días previos.
-
-**Cuota durante el workshop:** el workshop está pensado para caber en una cuota limitada. Si se te acaba, no tienes que empezar de nuevo: los Hitos 3 y 4 parten de un checkpoint (un zip que descargas), así que puedes engancharte directamente.
-
-## Paso 3 · Preparar un emulador
-
-Primero descarga la plataforma de Android 16 (API 36) y la imagen del sistema para el emulador. Son varios GB, así que es lo que más tarda: hazlo con tiempo y buena conexión.
-
-```
-android sdk install platforms/android-36
-android sdk install system-images/android-36/google_apis/<arquitectura>
-```
-
-Sustituye `<arquitectura>` según tu equipo:
-
-- `arm64-v8a`: Mac con chip Apple (M1 o posterior) y portátiles con procesador ARM.
-- `x86_64`: Mac con procesador Intel y la mayoría de equipos Windows y Linux.
-
-Después, para el emulador, en macOS y Linux:
-
-```
-android emulator create
-android emulator list
-```
-
-Arranca el dispositivo una vez con `android emulator start <nombre>` para comprobar que funciona. En Windows, créalo desde Android Studio (Device Manager).
-
-## Paso 4 · Descargar la documentación y las skills
-
-La primera vez que se usan, `android docs` y `android skills` descargan su índice y pueden tardar un par de minutos. Hazlo ahora para no esperar durante el workshop:
-
-```
-android docs search "navigation 3"
-android skills list
-```
-
-Si la primera búsqueda se queda colgada o falla con un error de índice, espera a que termine, ciérrala y vuelve a ejecutarla.
-
-## Paso 5 · Calentar Gradle (opcional, recomendado)
-
-La primera compilación de un proyecto Android descarga Gradle y muchas librerías, y puede tardar varios minutos. Hacerla ahora evita tiempos muertos en el Hito 1. En una carpeta temporal:
+**3.2 · Calentar Gradle** (opcional, recomendado: ahorra varios minutos en el Hito 1). Después borra la carpeta `WarmUp`:
 
 ```
 android create --name WarmUp --output WarmUp
 cd WarmUp
-./gradlew assembleDebug
+./gradlew assembleDebug        # Windows: gradlew.bat assembleDebug
 ```
 
-(En Windows usa `gradlew.bat assembleDebug`.) Cuando termine, borra la carpeta `WarmUp`. No la necesitarás más.
+## 4. Comprobación final
 
-## Comprobación final
+En una terminal nueva:
 
-Si puedes marcar todo esto, estás listo:
+```
+android info
+android emulator list
+```
 
-- [ ] `android -V` muestra una versión.
-- [ ] `android info` indica la ruta de tu SDK de Android.
-- [ ] `java -version` y `adb version` funcionan en una terminal nueva.
-- [ ] `android docs search "navigation 3"` y `android skills list` devuelven resultados.
-- [ ] Tu agente arranca y has iniciado sesión.
-- [ ] La plataforma de Android 16 está instalada: `android sdk list` muestra `platforms/android-36`.
-- [ ] Un emulador arranca, o tienes un móvil con depuración USB.
-- [ ] (Opcional) La compilación de calentamiento de Gradle terminó.
-- [ ] Prueba con el agente: en una carpeta vacía, pídele «Ejecuta `android --help` y dime en una frase qué puede hacer». Si lo ejecuta y te contesta, todo está bien conectado.
+Estás listo si:
+
+- [ ] `android info` muestra la ruta de tu SDK.
+- [ ] `android emulator list` muestra tu emulador.
 
 ## Problemas frecuentes
 
 | Síntoma | Qué probar |
 | --- | --- |
-| `android: command not found` | Cierra y abre la terminal. Si sigue igual, comprueba que la carpeta de instalación está en tu PATH. |
-| Windows: falla la descarga desde PowerShell o `android emulator` no funciona | Son limitaciones conocidas. Descarga desde la página oficial y crea el emulador desde Android Studio. |
-| El emulador va muy lento, la app se queda colgada o aparece «La aplicación no responde» | Suele ser falta de memoria: los emuladores nuevos traen solo 2 GB de RAM. Cierra aplicaciones pesadas, reinicia el emulador (`android emulator stop <nombre>` y después `android emulator start <nombre>`) y vuelve a probar. |
+| `android: command not found` | Cierra y abre la terminal. Si sigue igual, añade al PATH la carpeta de instalación de Android CLI. |
+| `java: command not found` | Instala un JDK, o añade al PATH el que incluye Android Studio y define `JAVA_HOME` apuntando a él. Abre una terminal nueva. |
+| `adb: command not found` | Añade al PATH la carpeta `platform-tools` de tu SDK (`android info` te da la ruta). Abre una terminal nueva. |
+| El emulador va muy lento o aparece «La aplicación no responde» | Falta de memoria. Cierra aplicaciones pesadas, luego `android emulator stop <nombre>` y `android emulator start <nombre>`. |
 | El agente dice que has alcanzado la cuota | Espera a que se renueve (en Antigravity es semanal) o prueba con otro agente. |
 | Cualquier otro error | Copia el mensaje completo y envíalo a la organización antes del workshop, para que te pongan en contacto conmigo y lo resolvamos con calma. |
+
+## Apéndice: agentes y cuota
+
+Sirve cualquier agente que funcione desde la consola. Este workshop solo se ha probado con **Copilot CLI, Claude Code y Antigravity CLI**; con otros puede que algo no funcione igual.
+
+| Agente | Coste | Qué tener en cuenta |
+| --- | --- | --- |
+| Antigravity CLI (`agy`) | Gratis con cuenta de Google, con cuota semanal limitada | Es el sustituto de Gemini CLI. La cuota gratuita es más ajustada que la antigua; [Google no publica cifras exactas](https://www.cloudzero.com/blog/google-antigravity-pricing/). Dentro de la sesión, `/usage` muestra lo que te queda. |
+| OpenCode | Gratis con los modelos incluidos (OpenCode Zen); también acepta tu propia clave | Los [modelos gratuitos](https://www.desarrollolibre.net/blog/ia/opencode-complete-guide-to-the-code-agent-with-artificial-intelligence) tienen límites, rotan y pueden ir más lentos. Instalación: `curl -fsSL https://opencode.ai/install \| sh`, luego `opencode` y `/models`. En Windows, sigue su documentación oficial. |
+| Claude Code | De pago (suscripción de Claude o clave de API) | No tiene plan gratuito. Sigue su guía oficial de instalación. |
+| GitHub Copilot CLI | Incluido en Copilot Free, con uso mensual muy limitado | Desde junio de 2026 se factura por créditos de IA; el límite gratuito es bajo. Sigue su guía oficial de instalación. |
+
+**Con un plan gratuito:** haz una única prueba corta y no gastes cuota los días previos.
+
+**Si se te acaba la cuota durante el workshop:** no tienes que empezar de nuevo. Los Hitos 3 y 4 parten de un checkpoint (un zip que descargas), así que puedes engancharte directamente.
