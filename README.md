@@ -34,7 +34,7 @@ During the workshop we'll follow these instructions **together**, so please wait
 
 Durante el workshop seguiremos estas instrucciones **juntos**, así que espera a que lo hagamos antes de empezar. Puedes echarles un vistazo antes, pero no te adelantes.
 
-Follow the milestones in order, starting with Milestone 1 / Hito 1: [en](en/Milestones/STEP_1.md) · [es](es/Hitos/STEP_1.md). Milestone 1 explains how to set up the folder with `AGENTS.md` and `SPEC.md`. / El Hito 1 explica cómo preparar la carpeta con `AGENTS.md` y `SPEC.md`.
+Follow the milestones in order, starting with Milestone 1 / Hito 1: [en](en/Milestones/STEP_1.md) · [es](es/Hitos/STEP_1.md). Milestone 1 explains how to set up the folder with `AGENTS.md`, `SPEC.md` and `SAMPLE_RECIPES.md`. / El Hito 1 explica cómo preparar la carpeta con `AGENTS.md`, `SPEC.md` y `SAMPLE_RECIPES.md`.
 
 ## License
 

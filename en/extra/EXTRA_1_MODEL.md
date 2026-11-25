@@ -4,7 +4,7 @@ Have the data model and the sample data.
 
 ## Before the prompt
 
-Copy `SAMPLE_RECIPES.md` (from the `en` folder) to the project root, next to `SPEC.md`.
+Check that `SAMPLE_RECIPES.md` is in the project root, next to `SPEC.md`. You copied it in [Milestone 1](../Milestones/STEP_1.md).
 
 ## Prompt
 

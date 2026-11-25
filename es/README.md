@@ -57,7 +57,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 | Hito | Qué consigues |
 |---|---|
 | [Hito 1](Hitos/STEP_1.md) | Android CLI preparado con `android init`, y el proyecto Android creado, compilando y ejecutándose en el emulador |
-| [Hito 2](Hitos/STEP_2.md) | El esqueleto de navegación con tres destinos, montado con la skill `navigation-3` |
+| [Hito 2](Hitos/STEP_2.md) | El esqueleto de navegación con tres destinos, montado con la skill `navigation-3`, que el propio agente busca e instala |
 | [Hito 3](Hitos/STEP_3.md) | Un fallo visual en la app, encontrado por el agente con `android layout` y `android screen capture` |
 | [Hito 4](Hitos/STEP_4.md) | Journeys: el agente ejecuta pruebas que recorren la app como una persona usuaria |
 
@@ -71,7 +71,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 | `Hitos/` | Los pasos del taller, uno por archivo |
 | `extra/` | Pasos opcionales para construir la app entera en casa |
 | `SPEC.md` | La especificación de la app: datos, reglas de negocio y textos exactos |
-| `SAMPLE_RECIPES.md` | Las seis recetas de ejemplo; solo hacen falta en los pasos opcionales de `extra/` |
+| `SAMPLE_RECIPES.md` | Las seis recetas de ejemplo; el agente solo las necesita en los pasos opcionales de `extra/` |
 | `../util/AGENTS.md` | Las convenciones del proyecto para el agente (arquitectura, librerías, cómo trabajar) |
 
-Copia `SPEC.md` y `AGENTS.md` a la raíz de tu proyecto antes de lanzar el prompt del Hito 1. Los pasos exactos están en [Hito 1](Hitos/STEP_1.md).
+Copia `SPEC.md`, `SAMPLE_RECIPES.md` y `AGENTS.md` a la raíz de tu proyecto antes de lanzar el prompt del Hito 1. Los pasos exactos están en [Hito 1](Hitos/STEP_1.md).

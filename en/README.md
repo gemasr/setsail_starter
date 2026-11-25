@@ -57,7 +57,7 @@ Tip: start a **new agent session for each milestone**. Each milestone comes with
 | Milestone | What you get |
 |---|---|
 | [Milestone 1](Milestones/STEP_1.md) | Android CLI set up with `android init`, and the Android project created, building and running on the emulator |
-| [Milestone 2](Milestones/STEP_2.md) | The navigation skeleton with three destinations, set up with the `navigation-3` skill |
+| [Milestone 2](Milestones/STEP_2.md) | The navigation skeleton with three destinations, set up with the `navigation-3` skill, which the agent finds and installs itself |
 | [Milestone 3](Milestones/STEP_3.md) | A visual bug in the app, found by the agent with `android layout` and `android screen capture` |
 | [Milestone 4](Milestones/STEP_4.md) | Journeys: the agent runs tests that walk through the app like a user |
 
@@ -71,7 +71,7 @@ Want to build the whole app yourself? The steps the workshop skips (data model, 
 | `Milestones/` | The workshop steps, one per file |
 | `extra/` | Optional steps to build the whole app at home |
 | `SPEC.md` | The app specification: data, business rules and exact texts |
-| `SAMPLE_RECIPES.md` | The six sample recipes; only needed for the optional `extra/` steps |
+| `SAMPLE_RECIPES.md` | The six sample recipes; the agent only needs them for the optional `extra/` steps |
 | `../util/AGENTS.md` | The project conventions for the agent (architecture, libraries, how to work) |
 
-Copy `SPEC.md` and `AGENTS.md` to the root of your project before running the Milestone 1 prompt. The exact steps are in [Milestone 1](Milestones/STEP_1.md).
+Copy `SPEC.md`, `SAMPLE_RECIPES.md` and `AGENTS.md` to the root of your project before running the Milestone 1 prompt. The exact steps are in [Milestone 1](Milestones/STEP_1.md).

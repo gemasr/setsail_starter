@@ -4,7 +4,7 @@ Tener el modelo de datos y los datos de ejemplo.
 
 ## Antes del prompt
 
-Copia `SAMPLE_RECIPES.md` (de la carpeta `es`) a la raíz del proyecto, junto a `SPEC.md`.
+Comprueba que `SAMPLE_RECIPES.md` está en la raíz del proyecto, junto a `SPEC.md`. Lo copiaste en el [Hito 1](../Hitos/STEP_1.md).
 
 ## Prompt
 
