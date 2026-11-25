@@ -47,14 +47,6 @@ Other options, costs and quota: see the [appendix](#appendix-agents-and-quota).
 
 ✅ The emulator boots. You can use a phone with USB debugging instead.
 
-**3.2 · Gradle warm-up** (optional, recommended: saves several minutes in Milestone 1). Then delete the `WarmUp` folder:
-
-```
-android create --name WarmUp --output WarmUp
-cd WarmUp
-./gradlew assembleDebug        # Windows: gradlew.bat assembleDebug
-```
-
 ## 4. Final check
 
 In a new terminal:
