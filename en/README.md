@@ -60,6 +60,7 @@ Tip: start a **new agent session for each milestone**. Each milestone comes with
 | [Milestone 2](Milestones/STEP_2.md) | The navigation skeleton with three destinations, set up with the `navigation-3` skill, which the agent finds and installs itself |
 | [Milestone 3](Milestones/STEP_3.md) | A visual bug in the app, found by the agent with `android layout` and `android screen capture` |
 | [Milestone 4](Milestones/STEP_4.md) | Journeys: the agent runs tests that walk through the app like a user |
+| [Extra step](Milestones/STEP_5.md) (optional, if you have time left) | Move purchased items to the pantry, with its journey: this time you write the prompt |
 
 Want to build the whole app yourself? The steps the workshop skips (data model, Pantry, Recipes and Shopping) are in [extra/](extra/README.md).
 

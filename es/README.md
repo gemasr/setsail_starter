@@ -60,6 +60,7 @@ Consejo: empieza una **sesión nueva del agente en cada hito**. Cada hito trae s
 | [Hito 2](Hitos/STEP_2.md) | El esqueleto de navegación con tres destinos, montado con la skill `navigation-3`, que el propio agente busca e instala |
 | [Hito 3](Hitos/STEP_3.md) | Un fallo visual en la app, encontrado por el agente con `android layout` y `android screen capture` |
 | [Hito 4](Hitos/STEP_4.md) | Journeys: el agente ejecuta pruebas que recorren la app como una persona usuaria |
+| [Extra step](Hitos/STEP_5.md) (opcional, si te sobra tiempo) | Mover lo comprado a la despensa, con su journey: esta vez el prompt lo escribes tú |
 
 ¿Quieres construir la app entera tú? Los pasos que el taller se salta (modelo de datos, Pantry, Recipes y Shopping) están en [extra/](extra/README.md).
 

@@ -17,12 +17,6 @@ Cierra y vuelve a abrir la app antes de empezar, para que la lista de la compra 
 - [ ]  Marcar "Wheat noodles" como comprado lo muestra tachado y al final
 - [ ]  En "Sanji's Salmon Onigiri" (disponible) el botón no aparece
 
-## Extra opcional
-
-```
-Añade en Shopping el botón "Move purchased to pantry": suma esas cantidades a la despensa y los quita de la lista.
-```
-
 ## Si te atascas
 
 ```

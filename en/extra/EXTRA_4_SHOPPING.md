@@ -17,12 +17,6 @@ Close and reopen the app before starting, so the shopping list is empty. If you 
 - [ ]  Marking "Wheat noodles" as purchased shows it crossed out and at the end
 - [ ]  In "Sanji's Salmon Onigiri" (available) the button does not appear
 
-## Optional extra
-
-```
-Add a "Move purchased to pantry" button in Shopping: it adds those quantities to the pantry and removes them from the list.
-```
-
 ## If you get stuck
 
 ```
